@@ -59,3 +59,28 @@ ALTER TABLE detalhes_do_filme
     ADD CONSTRAINT fk_detalhes_filme
     FOREIGN KEY (filme_id) REFERENCES filme(id);`
 ```
+
+## Comandos crud - exercício
+
+```sql
+INSERT INTO fabricantes (nome) VALUES('Positivo');
+INSERT INTO fabricantes (nome) VALUES('Microsoft');
+```
+```sql
+INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+    'Xbox Series S', 
+    'Velocidade e desempenho de última geração.',
+    1997,
+    5,
+    8--id do fabricante Microsoft
+);
+
+INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
+VALUES(
+    'Notebook Motion', 
+    'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas.',
+    1213.65,
+    5,
+    7 --id do fabricante Microsoft
+);
