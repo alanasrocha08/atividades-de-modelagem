@@ -97,7 +97,48 @@ INSERT INTO generos(nome)
 VALUES ('Terror'), ('Suspense'), ('Fantasia'), ('Ação');
 ```
 
-####
+#### Adiciona filmes 
+```sql
+INSERT INTO filme(nome, data_de_lancamento, genero_id)
+VALUES (
+    'Pânico',
+    '1996-12-20',
+    1
+    )
+``` 
+
+```sql
+INSERT INTO filme(nome, data_de_lancamento, genero_id)
+VALUES (
+    'Pânico',
+    '1996-12-20',
+    1
+    )
+
+INSERT INTO filme(nome, data_de_lancamento, genero_id)
+VALUES (
+    'fuja',
+    '2020-04-13',
+    2
+    );
+
+INSERT INTO filme(nome, data_de_lancamento, genero_id)
+VALUES (
+    'A Bela e a Fera',
+    '2017-03-02',
+    3
+    );
+
+    INSERT INTO filme(nome, data_de_lancamento, genero_id)
+VALUES (
+    'Até o Último Homem',
+    '2017-01-26',
+    4
+    );
+``` 
+
+#### Adiciona detalhes dos filmes 
+
 
 
 
