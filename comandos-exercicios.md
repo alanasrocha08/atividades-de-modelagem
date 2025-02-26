@@ -82,7 +82,7 @@ VALUES(
     'Intel Dual Core 4GB de RAM, 128GB SSD e Tela 14,1 polegadas.',
     1213.65,
     8,
-    8 --id do fabricante Microsoft
+    7 --id do fabricante Positivo
 );
 ```
 
@@ -153,7 +153,26 @@ WHERE fabricante_id !=8;
 UPDATE fabricantes SET nome = 'Asus do Brasil'
 WHERE id = 1;
 
--- Alterar a quantidade PARA 10 dos produtos que custam abaixo de 2000 exceto da Microsoft.
+-- Alterar a quantidade para 10 dos produtos que custam abaixo de 2000 exceto da Microsoft.
+UPDATE produtos SET quantidade = 10
+WHERE preco <= 2000 AND NOT fabricante_id = 8
+```
+
+---
+
+## UPDATE (Fabricante e Produtos)
+
+**☠️ Perigo! 🚨**
+**SEMPRE USE** a cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- Para remover uma linha (fabricantes)
+DELETE FROM fabricantes WHERE id = 4;
+DELETE FROM fabricantes WHERE id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+
+DELETE FROM fabricantes WHERE id = 3;
 ```
 
 
