@@ -88,6 +88,16 @@ VALUES(
 
 ---
 
+## Comandos com operadores lógicos
+
+#### Adiciona 4 gêneros
+
+```sql
+INSERT INTO generos(nome)
+VALUES ('Terror'), ('Suspense'), ('Fantasia'), ('Ação');
+```
+
+####
 
 
 
