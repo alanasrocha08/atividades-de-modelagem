@@ -47,7 +47,7 @@ VALUES(
     'Tablet com versão 16 do sistema operacional Android, possui tela de 10 podegadas e armazenamento de 128 GB.',
     1000,
     15,
-    5 --id do fabricante Samsung
+    5 -- id do fabricante Samsung
 );
 
 INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
@@ -56,7 +56,7 @@ VALUES(
     'Refrigerador frost-free com acesso à Internet',
     5500,
     16,
-    6 --id do fabricante Brastemp
+    6 -- id do fabricante Brastemp
 );
 
 INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
@@ -65,7 +65,7 @@ VALUES(
     'Smartphone Apple cheio de frescuras e muito caro...',
     9666.99,
     2,
-    3 --id do fabricante Apple
+    3 -- id do fabricante Apple
 );
 
 INSERT INTO produtos(nome, descricao, preco, quantidade, fabricante_id)
