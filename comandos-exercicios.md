@@ -116,3 +116,12 @@ WHERE fabricante_id = 3
 SELECT nome, preco FROM produtos
 WHERE preco >= 2000 and preco <= 6000   
 ```
+
+#### OU (OR)
+
+```sql
+-- Mini exercício: Exibir nome, preco dos produtos da Apple e da Samsung
+SELECT nome, preco FROM produtos
+WHERE fabricante_id = 3  or fabricante_id = 5             
+```
+
