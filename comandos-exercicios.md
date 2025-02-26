@@ -129,7 +129,7 @@ VALUES (
     3
     );
 
-    INSERT INTO filme(nome, data_de_lancamento, genero_id)
+INSERT INTO filme(nome, data_de_lancamento, genero_id)
 VALUES (
     'Até o Último Homem',
     '2017-01-26',
@@ -138,6 +138,17 @@ VALUES (
 ``` 
 
 #### Adiciona detalhes dos filmes 
+
+```sql
+INSERT INTO detalhes_do_filme(filme_id, duracao_minutos, sinopse, brilheteria, orcamento)
+VALUES (
+    1,
+    '2017-01-26',
+    4
+    );
+```
+
+
 
 
 
