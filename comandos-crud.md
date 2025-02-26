@@ -78,5 +78,92 @@ VALUES(
 );
 ```
 
-## Comandos do exercício
+---
+
+## SELECT (Produtos)
+
+```sql
+-- Lendo TODADS as colunas de TODOS os registros 
+SELECT * FROM produtos;
+
+-- Lendo somente nome e preco de todos os registros
+SELECT nome, preco FROM produtos;
+SELECT preco, nome FROM produtos;
+
+-- Mostrar nome, preco e quantidade SOMENTE dos produtos que custam abaixo de 5000
+SELECT nome, preco, quantidade FROM produtos
+WHERE preco < 5000;
+
+-- Mini exercício: mostre o nome e descrição somente dos produtos da Apple.
+SELECT nome, descricao FROM produtos
+WHERE fabricante_id = 3
+```
+
+### Operadores LÓGICOS: E, OU e NÃO
+
+#### E (AND)
+
+```sql
+-- Exibir nome e preco dos produtos que custa, entre 2000 e 6000
+SELECT nome, preco FROM produtos
+WHERE preco >= 2000 and preco <= 6000   
+```
+
+#### OU (OR)
+
+```sql
+-- Mini exercício: Exibir nome, preco dos produtos da Apple e da Samsung
+SELECT nome, preco FROM produtos
+WHERE fabricante_id = 3  or fabricante_id = 5  
+
+-- versão usandO a função SQL IN()
+SELECT nome, descricao FROM produtos
+WHERE fabricabte-id IN(3, 5);
+```
+
+#### NÃO (NOT)
+
+```sql
+-- Nome, desrição e preço de todos os produtos EXCETO da Positivo
+SELECT nome, descricao, preco FROM produtos
+WHERE NOT fabricante_id = 8;
+
+--Versão usando operador relacional dde "diferença/diferente"
+SELECT nome, descricao, preco FROM produtos
+WHERE fabricante_id !=8;
+```
+
+---
+
+## UPDATE (fabricante)
+
+**☠️ Perigo! 🚨**
+**SEMPRE USE** a cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- Trocar o nome do fabricante Asus para Asus do Brasil
+UPDATE fabricantes SET nome = 'Asus do Brasil'
+WHERE id = 1;
+
+-- Alterar a quantidade para 10 dos produtos que custam abaixo de 2000 exceto da Microsoft.
+UPDATE produtos SET quantidade = 10
+WHERE preco <= 2000 AND NOT fabricante_id = 8
+```
+
+---
+
+## UPDATE (Fabricante e Produtos)
+
+**☠️ Perigo! 🚨**
+**SEMPRE USE** a cláusula `WHERE` em seu comando `UPDATE` especificando uma ou mais condições para a atualização.
+
+```sql
+-- Para remover uma linha (fabricantes)
+DELETE FROM fabricantes WHERE id = 4;
+DELETE FROM fabricantes WHERE id = 1;
+
+DELETE FROM produtos WHERE id = 4;
+
+DELETE FROM fabricantes WHERE id = 3;
+```
 
