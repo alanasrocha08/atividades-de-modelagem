@@ -122,6 +122,10 @@ WHERE preco >= 2000 and preco <= 6000
 ```sql
 -- Mini exercício: Exibir nome, preco dos produtos da Apple e da Samsung
 SELECT nome, preco FROM produtos
-WHERE fabricante_id = 3  or fabricante_id = 5             
+WHERE fabricante_id = 3  or fabricante_id = 5  
+
+-- versão usandO a função SQL IN()
+SELECT nome, descricao FROM produtos
+WHERE fabricabte-id IN(3, 5);
 ```
 
