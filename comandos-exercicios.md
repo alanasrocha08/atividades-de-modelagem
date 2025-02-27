@@ -98,14 +98,7 @@ VALUES ('Terror'), ('Suspense'), ('Fantasia'), ('Ação');
 ```
 
 #### Adiciona filmes 
-```sql
-INSERT INTO filme(nome, data_de_lancamento, genero_id)
-VALUES (
-    'Pânico',
-    '1996-12-20',
-    1
-    )
-``` 
+
 
 ```sql
 INSERT INTO filme(nome, data_de_lancamento, genero_id)
@@ -140,11 +133,37 @@ VALUES (
 #### Adiciona detalhes dos filmes 
 
 ```sql
-INSERT INTO detalhes_do_filme(filme_id, duracao_minutos, sinopse, brilheteria, orcamento)
+INSERT INTO detalhes_do_filme(filme_id, duracao_minutos, sinopse, bilheteria, orcamento)
 VALUES (
     1,
-    '2017-01-26',
-    4
+    90.60,
+    'Na pequena cidade de Woodsboro, um grupo de jovens do ensino médio enfrenta um assassino mascarado que testa seus conhecimentos sobre filmes de terror. Sidney Prescott, traumatizada após o brutal assassinato de sua mãe, é o alvo preferido do misterioso homicida que aterroriza a outrora pacata comunidade.',
+    908000000000.00,
+    15000000000.00
+    );
+
+     (
+    2,
+    78,
+    'Após anos vivendo isolada do mundo e sendo cuidada por sua rígida mãe, Chloe começa a desconfiar que há algo extremamente errado em sua vida.',
+    1000000000.00,
+    15000000000.00
+    );
+
+     (
+    3,
+    126,
+    'Moradora de uma pequena aldeia francesa, Bela tem o pai capturado pela Fera e decide entregar sua vida ao estranho ser em troca da liberdade do progenitor. No castelo, ela conhece objetos mágicos e descobre que a Fera é na verdade um príncipe que precisa de amor para voltar à forma humana.',
+    1000000000.00,
+    15000000000.00
+    );
+
+     (
+    4,
+    131.4,
+    'Acompanhe a história de Desmond T. Doss, um médico do exército americano que, durante a Segunda Guerra Mundial, se recusa a pegar em armas. Durante a Batalha de Okinawa ele trabalha na ala médica e salva cerca de 75 homens.',
+    1000000000.00,
+    15000000000.00
     );
 ```
 
