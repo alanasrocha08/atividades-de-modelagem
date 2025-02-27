@@ -181,6 +181,19 @@ UPDATE generos SET nome = 'Romance'
 WHERE id = 1;
 ```
 
+### Operações e funções de agregação
+
+```sql
+-- mostrar filme e genero do filme
+SELECT
+    filme.nome AS Filmes,
+    generos.nome AS Gêneros,
+FROM filme INNER JOIN generos
+ON filme.genero_id = generos.id
+ORDER BY Filmes ASC, Gêneros DESC;
+    
+```
+
 
 
 
