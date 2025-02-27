@@ -176,6 +176,10 @@ WHERE orcamento >= 1000000000.00
 ```sql
 DELETE FROM detalhes_do_filme WHERE id = 1;
 ```
+```sql
+UPDATE generos SET nome = 'Romance'
+WHERE id = 1;
+```
 
 
 
