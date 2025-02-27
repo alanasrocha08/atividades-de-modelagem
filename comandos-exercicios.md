@@ -167,6 +167,16 @@ VALUES (
     );
 ```
 
+#### SELECT
+```sql
+SELECT duracao_minutos FROM detalhes_do_filme
+WHERE orcamento >= 1000000000.00 
+```
+
+```sql
+DELETE FROM detalhes_do_filme WHERE id = 1;
+```
+
 
 
 
