@@ -187,11 +187,20 @@ WHERE id = 1;
 -- mostrar filme e genero do filme
 SELECT
     filme.nome AS Filmes,
-    generos.nome AS Gêneros,
+    generos.nome AS Gêneros
 FROM filme INNER JOIN generos
 ON filme.genero_id = generos.id
 ORDER BY Filmes ASC, Gêneros DESC;
-    
+```
+
+```sql
+SELECT
+    filme.nome AS Filme,
+    detalhes_do_filme.sinopse AS Sinopse
+FROM filme 
+    INNER JOIN detalhes_do_filme
+ON detalhes_do_filme.filme_id = filme.id 
+ORDER BY Filme ASC, Sinopse DESC;
 ```
 
 

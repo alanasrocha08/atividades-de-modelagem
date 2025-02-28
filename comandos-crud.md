@@ -214,7 +214,7 @@ SELECT COUNT (DISTINCT fabricante_id) AS "Qtd de Fabricantes com Produtos" FROM 
 SELECT nome, preco, quantidade, (preco * quantidade) as Toltal
 FROM produtos;
 
---- Segmentção/Agrupamento de resultados
+--- Segmentação/Agrupamento de resultados
 SELECT fabricante_id, SUM(preco) AS Total FROM produtos
 GROUP BY fabricante_id; 
 ```
@@ -239,8 +239,8 @@ SELECT
     produtos.nome AS Produto,
     produtos.preco AS Preço,
     fabricantes.nome AS Fabricante
-FROM produtos INNER JOIN fabricantes
-ON produtos.fabricante_id = fabricantes.id
+FROM produtos 
+    INNER JOIN fabricantes ON produtos.fabricante_id = fabricantes.id
 ORDER BY Produto ASC, Preço DESC; 
 ```
 
