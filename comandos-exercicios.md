@@ -194,6 +194,7 @@ ORDER BY Filmes ASC, Gêneros DESC;
 ```
 
 ```sql
+-- mostrar nome do filme e sinopse
 SELECT
     filme.nome AS Filme,
     detalhes_do_filme.sinopse AS Sinopse
@@ -201,6 +202,17 @@ FROM filme
     INNER JOIN detalhes_do_filme
 ON detalhes_do_filme.filme_id = filme.id 
 ORDER BY Filme ASC, Sinopse DESC;
+```
+```sql
+-- Mostrar Filme, o Gênero e o Detalhe/Sinopse do Filme
+SELECT
+    fime.nome AS Filme,
+    generos.nnome AS Gênero,
+    detalhes_do_filme.sinopse AS Sinopse
+FROM filme
+    INNER JOIN generos ON filme.generos_id = generos.id
+    INNER JOIN detalhes ON filme.id = detalhes_do_filme.filme_id;
+
 ```
 
 
